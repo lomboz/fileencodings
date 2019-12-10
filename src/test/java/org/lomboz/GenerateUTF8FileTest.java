@@ -18,7 +18,7 @@ public class GenerateUTF8FileTest {
         Path targetPath = Files.createTempFile("utf8file",".txt");
         Path expectedPath = Paths.get("./src/test/resources/all-utf-8-chars.txt");
 
-        new GenerateUTF8File().generateFile(targetPath);
+        new GenerateUTF8File().generateFile(targetPath, false);
 
         FileAssert.assertBinaryEquals(expectedPath.toFile(), targetPath.toFile());
 
